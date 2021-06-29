@@ -27,6 +27,7 @@ namespace CommercialAutomation.Models.Classes
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public String CurrentMail { get; set; }
+        public bool Status { get; set; }
         public ICollection<SalesMovement> SalesMovements { get; set; }
     }
 }

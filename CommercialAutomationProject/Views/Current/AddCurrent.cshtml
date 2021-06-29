@@ -1,0 +1,30 @@
+﻿@model CommercialAutomation.Models.Classes.Current
+@{
+    ViewBag.Title = "AddCurrent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Yeni Cari Ekle</h2></center>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.CurrentName)
+    @Html.TextAreaFor(x => x.CurrentName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CurrentSurname)
+    @Html.TextAreaFor(x => x.CurrentSurname, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CurrentCity)
+    @Html.TextAreaFor(x => x.CurrentCity, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CurrentMail)
+    @Html.TextAreaFor(x => x.CurrentMail, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-info">Ekle</button>
+
+</form>
+
+

@@ -1,0 +1,35 @@
+﻿@model CommercialAutomation.Models.Classes.Current
+
+@{
+    ViewBag.Title = "GetCurrent";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Cari Güncelle</h2></center>
+<br />
+
+@using (Html.BeginForm("UpdateCurrent", "Current", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x => x.CurrentID)
+        @Html.LabelFor(x => x.CurrentName)
+        @Html.TextAreaFor(x => x.CurrentName, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.CurrentSurname)
+        @Html.TextAreaFor(x => x.CurrentSurname, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.CurrentCity)
+        @Html.TextAreaFor(x => x.CurrentCity, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.CurrentMail)
+        @Html.TextAreaFor(x => x.CurrentMail, new { @class = "form-control" })
+        <br />
+
+
+
+        <button class="btn btn-success">Güncelle</button>
+    </div>
+
+
+}

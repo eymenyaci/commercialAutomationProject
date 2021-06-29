@@ -1,0 +1,35 @@
+﻿@using CommercialAutomation.Models.Classes
+@model List<Current>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>Cari ID</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+        <th>Mail</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var v in Model)
+    {
+        <tr>
+            <td>@v.CurrentID</td>
+            <td>@v.CurrentName</td>
+            <td>@v.CurrentSurname</td>
+            <td>@v.CurrentCity</td>
+            <td>@v.CurrentMail</td>
+            <td><a href="/Current/DeleteCurrent/@v.CurrentID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Current/GetCurrent/@v.CurrentID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Current/SalesCurrent/@v.CurrentID" class="btn btn-success" style="background-color:blue;">Satış Geçmişi</a></td>
+        </tr>
+    }
+</table>
+<a href="/Current/AddCurrent" class="btn btn-primary">Cari Ekle</a>
+
