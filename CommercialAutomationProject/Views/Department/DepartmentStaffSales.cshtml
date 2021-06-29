@@ -1,0 +1,41 @@
+﻿@using CommercialAutomation.Models.Classes
+@model List<SalesMovement>
+@{
+    ViewBag.Title = "DepartmentStaffSales";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Departman Personel Satış</h2></center>
+<br />
+<div class="card-header">
+    <a href="/Department/Index" class="btn btn-secondary">Geri</a>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user"></i>&nbsp;
+    Personel Adı : @ViewBag.vst
+</div>
+
+<table class="table table-hover">
+    <tr>
+        <th>Satış ID</th>
+        <th>Ürün</th>
+        <th>Alıcı Ad</th>
+        <th>Alıcı Soyad</th>
+        <th>Fiyat</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+        <th>Yazdır</th>
+    </tr>
+    @foreach(var x in Model) {
+    <tr>
+        <td>@x.SalesID</td>
+        <td>@x.Product.ProductName</td>
+        <td>@x.Current.CurrentName</td>
+        <td>@x.Current.CurrentSurname</td>
+        <td>@x.SalesPrices</td>
+        <td>@x.SalesUnit</td>
+        <td>@x.SalesTotalPrices</td>
+        <td>@x.SalesDate</td>
+        <td><a href="#" class="btn btn-default" style="background-color:dodgerblue">Yazdır</a></td>
+    </tr>
+    }
+</table>
