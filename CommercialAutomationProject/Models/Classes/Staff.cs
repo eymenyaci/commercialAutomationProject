@@ -25,6 +25,7 @@ namespace CommercialAutomation.Models.Classes
         public String StaffImage { get; set; }
         public ICollection<SalesMovement> SalesMovements { get; set; }
         public int DepartmentID { get; set; }
+        public bool Status { get; set; }
         public virtual Department Department { get; set; }
 
     }

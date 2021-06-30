@@ -1,0 +1,36 @@
+﻿@model CommercialAutomation.Models.Classes.Staff
+@{
+    ViewBag.Title = "GetStaff";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Personel Güncelle</h2></center>
+<br />
+
+@using (Html.BeginForm("UpdateStaff", "Staff", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.StaffID)
+    @Html.LabelFor(x => x.StaffName)
+    @Html.TextAreaFor(x => x.StaffName, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.StaffSurname)
+    @Html.TextAreaFor(x => x.StaffSurname, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.StaffImage)
+    @Html.TextAreaFor(x => x.StaffImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Department)
+    @Html.DropDownListFor(x => x.DepartmentID, (List<SelectListItem>)ViewBag.value1, new { @class = "form-control" })
+    <br />
+
+
+
+    <button class="btn btn-success">Güncelle</button>
+</div>
+
+
+}
+
+
