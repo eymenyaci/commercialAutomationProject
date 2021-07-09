@@ -1,0 +1,35 @@
+﻿@model CommercialAutomation.Models.Classes.InvoiceDetail
+@{
+    ViewBag.Title = "AddDetailsInvoice";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Yeni Fatura Kalemi Ekle</h2></center>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.InvoiceDetailDescription)
+    @Html.TextAreaFor(x => x.InvoiceDetailDescription, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceDetailTotal)
+    @Html.TextAreaFor(x => x.InvoiceDetailTotal, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceDetailUnitPrice)
+    @Html.TextAreaFor(x => x.InvoiceDetailUnitPrice, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceDetailAmount)
+    @Html.TextAreaFor(x => x.InvoiceDetailAmount, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceID)
+    @Html.TextAreaFor(x => x.InvoiceID, new { @class = "form-control" })
+    <br />
+
+
+
+    <button class="btn btn-info">Ekle</button>
+
+</form>
+
+
+

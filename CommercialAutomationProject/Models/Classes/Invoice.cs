@@ -24,7 +24,10 @@ namespace CommercialAutomation.Models.Classes
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
         public String InvoiceTaxOffice { get; set; }
-        public DateTime InvoiceTime { get; set; }
+        
+        [Column(TypeName = "char")]
+        [StringLength(5)]
+        public String InvoiceTime { get; set; }
 
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
@@ -33,6 +36,7 @@ namespace CommercialAutomation.Models.Classes
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public String InvoiceReceiver { get; set; }
+        public decimal Total { get; set; }
         public ICollection<InvoiceDetail> InvoiceDetails { get; set; }
     }
 }

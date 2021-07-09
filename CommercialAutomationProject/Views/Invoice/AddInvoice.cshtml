@@ -1,0 +1,39 @@
+﻿@model CommercialAutomation.Models.Classes.Invoice
+@{
+    ViewBag.Title = "AddInvoice";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Yeni Fatura Ekle</h2></center>
+<br />
+
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.InvoiceSerialNumber)
+    @Html.TextAreaFor(x => x.InvoiceSerialNumber, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceOrderNumber)
+    @Html.TextAreaFor(x => x.InvoiceOrderNumber, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceDate)
+    @Html.TextAreaFor(x => x.InvoiceDate, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceTime)
+    @Html.TextAreaFor(x => x.InvoiceTime, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceTaxOffice)
+    @Html.TextAreaFor(x => x.InvoiceTaxOffice, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceDeliverer)
+    @Html.TextAreaFor(x => x.InvoiceDeliverer, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.InvoiceReceiver)
+    @Html.TextAreaFor(x => x.InvoiceReceiver, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-info">Ekle</button>
+
+</form>
+
+

@@ -1,0 +1,40 @@
+﻿@using CommercialAutomation.Models.Classes
+@model List<Invoice>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-hover" style="margin-top:20px;">
+    <tr>
+        <th style="width:100px;">ID</th>
+        <th>Seri No</th>
+        <th>Sıra No</th>
+        <th>Vergi Dairesi</th>
+        <th>Tarih</th>
+        <th>Saat</th>
+        <th>Teslim Eden</th>
+        <th>Teslim Alan</th>
+        <th>Toplam</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+        <th></th>
+    </tr>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.InvoiceID</td>
+            <td>@c.InvoiceSerialNumber</td>
+            <td>@c.InvoiceOrderNumber</td>
+            <td>@c.InvoiceTaxOffice</td>
+            <td>@c.InvoiceDate</td>
+            <td>@c.InvoiceTime</td>
+            <td>@c.InvoiceDeliverer</td>
+            <td>@c.InvoiceReceiver</td>
+            <td>@c.Total</td>
+            <td><a href="/Invoice/GetInvoice/@c.InvoiceID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Invoice/DetailsInvoice/@c.InvoiceID" class="btn btn-success" style="background-color:blue;">Detaylar</a></td>
+        </tr>
+    }
+</table>
+<a href="/Invoice/AddInvoice" class="btn btn-primary">Fatura Ekle</a>

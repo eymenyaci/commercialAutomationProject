@@ -1,0 +1,35 @@
+﻿@using CommercialAutomation.Models.Classes
+@model List<InvoiceDetail>
+@{
+    ViewBag.Title = "DetailsInvoice";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Fatura Detay</h2></center>
+<br />
+<div class="card-header"></div>
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+        <th>Açıklama</th>
+        <th>Miktar</th>
+        <th>Birim Fiyat</th>
+        <th>Tutar</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.InvoiceDetailID</td>
+            <td>@x.InvoiceDetailDescription</td>
+            <td>@x.InvoiceDetailTotal</td>
+            <td>@x.InvoiceDetailUnitPrice</td>
+            <td>@x.InvoiceDetailAmount</td>
+            
+        </tr>
+    }
+</table>
+<a href="/Invoice/AddDetailsInvoice" class="btn btn-default" style="background-color:navajowhite">Yeni Kalem Girişi</a>
+
+
+

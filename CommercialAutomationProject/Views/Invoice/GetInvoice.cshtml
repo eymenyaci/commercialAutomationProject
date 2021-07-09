@@ -1,0 +1,38 @@
+﻿@model CommercialAutomation.Models.Classes.Invoice
+@{
+    ViewBag.Title = "GetInvoice";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Fatura Güncelle</h2></center>
+<br />
+
+@using (Html.BeginForm("UpdateInvoice", "Invoice", FormMethod.Post))
+{@Html.HiddenFor(x => x.InvoiceID)
+@Html.LabelFor(x => x.InvoiceSerialNumber)
+@Html.TextAreaFor(x => x.InvoiceSerialNumber, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.InvoiceOrderNumber)
+@Html.TextAreaFor(x => x.InvoiceOrderNumber, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.InvoiceTaxOffice)
+@Html.TextAreaFor(x => x.InvoiceTaxOffice, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.InvoiceDate)
+@Html.TextAreaFor(x => x.InvoiceDate, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.InvoiceTime)
+@Html.TextAreaFor(x => x.InvoiceTime, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.InvoiceDeliverer)
+@Html.TextAreaFor(x => x.InvoiceDeliverer, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.InvoiceReceiver)
+@Html.TextAreaFor(x => x.InvoiceReceiver, new { @class = "form-control" })
+<br />
+<button class="btn btn-success">Güncelle</button>
+
+
+}
+

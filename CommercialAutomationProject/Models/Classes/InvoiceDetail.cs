@@ -18,6 +18,7 @@ namespace CommercialAutomation.Models.Classes
         public int InvoiceDetailTotal { get; set; }
         public decimal InvoiceDetailUnitPrice { get; set; }
         public decimal InvoiceDetailAmount { get; set; }
-        public Invoice Invoice { get; set; }
+        public int InvoiceID { get; set; }
+        public virtual Invoice Invoice { get; set; }
     }
 }
