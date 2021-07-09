@@ -1,0 +1,40 @@
+﻿@using CommercialAutomation.Models.Classes
+@model List<SalesMovement>
+@{
+    ViewBag.Title = "DetailSales";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Satış Detayı</h2></center>
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>Satış ID</th>
+        <th>Ürün</th>
+        <th>Alıcı Ad</th>
+        <th>Alıcı Soyad</th>
+        <th>Personel</th>
+        <th>Fiyat</th>
+        <th>Adet</th>
+        <th>Toplam</th>
+        <th>Tarih</th>
+       
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.SalesID</td>
+            <td>@x.Product.ProductName</td>
+            <td>@x.Current.CurrentName</td>
+            <td>@x.Current.CurrentSurname</td>
+            <td>@x.Staff.StaffName @x.Staff.StaffSurname</td>
+            <td>@x.SalesPrices</td>
+            <td>@x.SalesUnit</td>
+            <td>@x.SalesTotalPrices</td>
+            <td>@x.SalesDate</td>
+        </tr>
+    }
+</table>
+<button  class="btn btn-default" style="background-color:dodgerblue">Yazdır</button>
+

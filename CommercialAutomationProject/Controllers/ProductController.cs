@@ -76,5 +76,10 @@ namespace CommercialAutomation.Controllers
 
 
         }
+        public ActionResult ProductList()
+        {
+            var valueslist = c.Products.ToList();
+            return View(valueslist);
+        }
     }
 }

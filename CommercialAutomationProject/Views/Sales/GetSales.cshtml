@@ -1,0 +1,38 @@
+﻿@model CommercialAutomation.Models.Classes.SalesMovement
+@{
+    ViewBag.Title = "GetSales";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<center style="border:double;"><h2>Satış Güncelle</h2></center>
+<br />
+
+@using (Html.BeginForm("UpdateSales", "Sales", FormMethod.Post))
+{@Html.HiddenFor(x => x.SalesID)
+@Html.LabelFor(x => x.Product)
+@Html.DropDownListFor(x => x.ProductID, (List<SelectListItem>)ViewBag.vl1, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.Current)
+@Html.DropDownListFor(x => x.CurrentID, (List<SelectListItem>)ViewBag.vl2, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.Staff)
+@Html.DropDownListFor(x => x.StaffID, (List<SelectListItem>)ViewBag.vl3, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.SalesUnit)
+@Html.TextAreaFor(x => x.SalesUnit, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.SalesPrices)
+@Html.TextAreaFor(x => x.SalesPrices, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.SalesTotalPrices)
+@Html.TextAreaFor(x => x.SalesTotalPrices, new { @class = "form-control" })
+<br />
+@Html.LabelFor(x => x.SalesDate)
+@Html.TextAreaFor(x => x.SalesDate, new { @class = "form-control" })
+<br />
+<button class="btn btn-success">Güncelle</button>
+
+
+}
+

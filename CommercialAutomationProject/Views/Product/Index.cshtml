@@ -6,45 +6,64 @@
 }
 
 <br />
-<table class="table table-hover">
-    <tr>
-        <th>ID</th>
-        <th>Ürün Adı</th>
-        <th>Marka</th>
-        <th>Stok</th>
-        <th>Alış Fiyatı</th>
-        <th>Satış Fiyatı</th>
-        <th>Kategori</th>
-        <th>Aktiflik</th>
-        <th>Ürün Görsel</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
-    </tr>
-    @foreach (var p in Model)
-    {
-        <tr>
-            <td>@p.ProductID</td>
-            <td>@p.ProductName</td>
-            <td>@p.ProductBrand</td>
-            <td>@p.ProductStock</td>
-            <td>@p.PurchasePrice</td>
-            <td>@p.SalePrice</td>
-            <td>@p.Category.CategoryName</td>
-            @if (p.ProductStatus == true)
-            {
-                <td>Aktif</td>
-}
-            else
-            {
-                <td>Pasif</td>
-}
-            <td>@p.ProductImage</td>
-            <td><a href="/Product/DeleteProduct/@p.ProductID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Product/GetProduct/@p.ProductID" class="btn btn-success">Güncelle</a></td>
-        </tr>
-    }
+<a href="/Product/AddProduct" class="btn btn-primary">Ürün Ekle</a>      <a href="/Product/ProductList" class="btn btn-primary" style="background-color:forestgreen">Yazdır</a>
+    <br />
+    <br />
 
-</table>
-<a href="/Product/AddProduct" class="btn btn-primary">Ürün Ekle</a>
+    <table id="tableProduct" class="table table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>SKU</th>
+                <th>Ürün Adı</th>
+                <th>Marka</th>
+                <th>Stok</th>
+                <th>Alış Fiyatı</th>
+                <th>Satış Fiyatı</th>
+                <th>Kategori</th>
+                <th>Aktiflik</th>
+                <th>Ürün Görsel</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.ProductID</td>
+                    <td>@p.SKU</td>
+                    <td>@p.ProductName</td>
+                    <td>@p.ProductBrand</td>
+                    <td>@p.ProductStock</td>
+                    <td>@p.PurchasePrice</td>
+                    <td>@p.SalePrice</td>
+                    <td>@p.Category.CategoryName</td>
+                    @if (p.ProductStatus == true)
+                    {
+                        <td>Aktif</td>
+                    }
+                    else
+                    {
+                        <td>Pasif</td>
+                    }
+                    <td><a href="@p.ProductImage" target="_blank"><img src="@p.ProductImage" style="width:80px;height:80px;" /></a></td>
+                    <td><a href="/Product/DeleteProduct/@p.ProductID" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Product/GetProduct/@p.ProductID" class="btn btn-success">Güncelle</a></td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+    <script>
+        $('#tableProduct').dataTable({});
+    </script>
+
 
 

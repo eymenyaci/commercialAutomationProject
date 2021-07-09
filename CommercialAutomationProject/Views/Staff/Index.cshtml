@@ -21,7 +21,7 @@
     <td>@v.StaffID</td>
     <td>@v.StaffName</td>
     <td>@v.StaffSurname</td>
-    <td>@v.StaffImage</td>
+    <td><a href="@v.StaffImage" target="_blank"><img src="@v.StaffImage" style="width:80px;height:80px;" /></a></td>
     <td>@v.Department.DepartmentName</td>
     <td><a href="/Staff/GetStaff/@v.StaffID" class="btn btn-success">Güncelle</a></td>
     <td><a href="/Department/DepartmentStaffSales/@v.StaffID" class="btn btn-success" style="background-color:blue;">Satış Geçmişi</a></td>

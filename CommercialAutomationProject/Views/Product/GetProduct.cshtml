@@ -10,6 +10,9 @@
 
 @using (Html.BeginForm("UpdateProduct", "Product", FormMethod.Post))
 {@Html.HiddenFor(x => x.ProductID)
+@Html.LabelFor(x => x.SKU)
+@Html.TextAreaFor(x => x.SKU, new { @class = "form-control" })
+<br />
 @Html.LabelFor(x => x.ProductName)
 @Html.TextAreaFor(x => x.ProductName, new { @class = "form-control" })
 <br />

@@ -9,6 +9,9 @@
 <br />
 
 <form class="form-group" method="post">
+    @Html.LabelFor(x => x.SKU)
+    @Html.TextAreaFor(x => x.SKU, new { @class = "form-control" })
+    <br />
     @Html.LabelFor(x => x.ProductName)
     @Html.TextAreaFor(x => x.ProductName, new { @class = "form-control" })
     <br />

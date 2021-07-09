@@ -13,7 +13,7 @@ namespace CommercialAutomation.Models.Classes
         public int ProductID { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(50)]
         public String ProductName { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]

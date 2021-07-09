@@ -24,8 +24,8 @@
         <!-- Navbar Search-->
         <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
             <div class="input-group">
-                <input class="form-control" type="text" placeholder="Arayın..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                @*<input class="form-control" type="text" placeholder="Arayın..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>*@
             </div>
         </form>
         <!-- Navbar-->
@@ -68,19 +68,21 @@
                             Personeller
                         </a>
                         <div class="sb-sidenav-menu-heading">Arayüz</div>
-                        @*<a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
-                                Ayarlar
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Yetkilendirme</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Hata Sayfaları</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Giriş Yap</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
-                                </nav>
-                            </div>*@
+                        @*DIŞA AKTAR*@
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon"><i class="fas fa-exchange-alt"></i></div>
+                            Dışa Aktar
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="/Product/ProductList" target="_blank">Ürünler</a>
+                                <a class="nav-link" href="layout-sidenav-light.html" target="_blank">Personeller</a>
+                                <a class="nav-link" href="layout-sidenav-light.html" target="_blank">Satışlar</a>
+                                <a class="nav-link" href="layout-sidenav-light.html" target="_blank">Faturalar</a>
+                            </nav>
+                        </div>
+                        @*DIŞA AKTAR SONU*@
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
                             Ayarlar
@@ -113,6 +115,10 @@
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Raporlar</div>
+                        <a class="nav-link" href="/Sales/Index">
+                            <div class="sb-nav-link-icon"><i class="fas fa-money-check-alt"></i></div>
+                            Satışlar
+                        </a>
                         <a class="nav-link" href="index.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-barcode"></i></div>
                             Faturalar
@@ -125,10 +131,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-paperclip"></i></div>
                             Giderler
                         </a>
-                        <a class="nav-link" href="charts.html">
+                        @*<a class="nav-link" href="/Product/ProductList">
                             <div class="sb-nav-link-icon"><i class="fas fa-exchange-alt"></i></div>
-                            Hareketler
-                        </a>
+                            Dışa Aktar
+                        </a>*@
                         <a class="nav-link" href="charts.html">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             İstatistikler
