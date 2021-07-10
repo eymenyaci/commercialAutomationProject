@@ -65,6 +65,11 @@ namespace CommercialAutomation.Controllers
             return RedirectToAction("Index");
 
         }
+        public ActionResult InvoiceList()
+        {
+            var valueslist = c.Invoices.ToList();
+            return View(valueslist);
+        }
 
     }
 }

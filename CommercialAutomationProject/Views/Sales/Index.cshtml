@@ -4,11 +4,9 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-<br />
-<br />
-<br />
-<table id="tableSales" class="table table-hover">
-    <thead>
+
+<table class="table table-hover">
+   
         <tr>
             <th>ID</th>
             <th>Ürün</th>
@@ -21,7 +19,7 @@
             <th>Güncelle</th>
             <th>Detaylar</th>
         </tr>
-    </thead>
+    
     @foreach (var v in Model)
     {
         <tr>
@@ -40,16 +38,5 @@
     }
 </table>
 <a href="/Sales/AddSales" class="btn btn-primary">Satış Ekle</a>
-
-@*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
-<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
-<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
-<script>
-    $('#tableSales').dataTable({});
-</script>
-
 
 

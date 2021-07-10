@@ -472,6 +472,9 @@
     <Content Include="Views\Invoice\GetInvoice.cshtml" />
     <Content Include="Views\Invoice\DetailsInvoice.cshtml" />
     <Content Include="Views\Invoice\AddDetailsInvoice.cshtml" />
+    <Content Include="Views\Sales\SalesList.cshtml" />
+    <Content Include="Views\Staff\StaffList.cshtml" />
+    <Content Include="Views\Invoice\InvoiceList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

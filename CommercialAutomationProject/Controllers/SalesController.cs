@@ -101,5 +101,10 @@ namespace CommercialAutomation.Controllers
             var values = c.SalesMovements.Where(x => x.SalesID == id).ToList();
             return View(values);
         }
+        public ActionResult SalesList()
+        {
+            var valueslist = c.SalesMovements.ToList();
+            return View(valueslist);
+        }
     }
 }

@@ -61,5 +61,10 @@ namespace CommercialAutomation.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult StaffList()
+        {
+            var valueslist = c.Staffs.ToList();
+            return View(valueslist);
+        }
     }
 }
